@@ -29,7 +29,7 @@ export async function middleware(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
 
   // Public pages that don't need auth
-  const publicPaths = ['/login', '/register', '/auth', '/unsubscribe']
+  const publicPaths = ['/login', '/register', '/auth', '/unsubscribe', '/api/cron']
   const isPublicPath = publicPaths.some(path =>
     request.nextUrl.pathname.startsWith(path)
   )
