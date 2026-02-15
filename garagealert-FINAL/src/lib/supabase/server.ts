@@ -24,3 +24,6 @@ export async function createClient() {
     }
   )
 }
+
+// Alias for backward compatibility - all dashboard pages use this name
+export const createServerSupabaseClient = createClient
