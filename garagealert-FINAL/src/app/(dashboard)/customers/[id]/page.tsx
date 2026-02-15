@@ -122,7 +122,11 @@ export default async function CustomerDetailPage({
                 <h2 className="text-base font-semibold text-gray-900">
                   Vehicles ({vehicles?.length || 0})
                 </h2>
-                {/* Add vehicle link would go here */}
+                <Link href={`/customers/${customer.id}/vehicles/new`}>
+                  <Button variant="primary" className="flex items-center gap-1.5 text-sm">
+                    <Plus className="w-4 h-4" /> Add Vehicle
+                  </Button>
+                </Link>
               </div>
             </CardHeader>
             {vehicles && vehicles.length > 0 ? (
